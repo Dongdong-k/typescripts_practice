@@ -1,16 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Human = /** @class */ (function () {
-    function Human(name, age, gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+var Block = /** @class */ (function () {
+    function Block(index, hash, previousHash, data, timestamp) {
+        this.data = data;
+        this.hash = hash;
+        this.index = index;
+        this.previousHash = previousHash;
+        this.timestamp = timestamp;
     }
-    return Human;
+    return Block;
 }());
-var dongdong = new Human("dongdong", 30, "male");
-var sayHi = function (person) {
-    console.log("my name is " + person.name + " and " + person.age + " years old and my gender " + person.gender);
-};
-sayHi(dongdong);
+var genesisBlock = new Block(0, "sh1eks", "", "data123", 20374);
+var blockchain = [genesisBlock];
+console.log(blockchain);
 //# sourceMappingURL=index.js.map
