@@ -1,15 +1,15 @@
-// 객체와 인터페이스의 구조는 동일해야함
-interface Human {
-  name: string;
-  age: number;
-  gender: string;
+class Human {
+  public name: string;
+  public age: number;
+  public gender: string;
+  constructor(name: string, age: number, gender: string) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
 }
 
-const person = {
-  name: "dongdong",
-  age: 30,
-  gender: "male",
-};
+const dongdong = new Human("dongdong", 30, "male");
 
 const sayHi = (person: Human): void => {
   console.log(
@@ -17,6 +17,6 @@ const sayHi = (person: Human): void => {
   );
 };
 
-sayHi(person);
+sayHi(dongdong);
 
 export {};
