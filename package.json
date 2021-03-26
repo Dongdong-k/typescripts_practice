@@ -1,0 +1,17 @@
+{
+  "name": "typescripts_lecture",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Dongdong-k/typescripts_practice.git",
+  "author": "dongdong <crisish@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \" node ./dist/index.js\" "
+  },
+  "devDependencies": {
+    "tsc-watch": "^4.2.9"
+  },
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
+}
